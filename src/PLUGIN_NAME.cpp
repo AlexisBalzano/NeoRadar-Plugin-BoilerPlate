@@ -136,5 +136,5 @@ void PLUGIN_NAME::OnTimer(int Counter) {
 
 PluginSDK::PluginMetadata PLUGIN_NAME::GetMetadata() const
 {
-    return {"PLUGIN_NAME", PLUGIN_VERSION, "French VACC"};
+    return {"PLUGIN_NAME", PLUGIN_VERSION, "PLUGIN_AUTHOR"};
 }
