@@ -134,7 +134,7 @@ void PLUGIN_NAME::OnTimer(int Counter) {
     if (Counter % 5 == 0 && autoModeState) this->runScopeUpdate();
 }
 
-PluginSDK::PluginMetadata NeoVSID::GetMetadata() const
+PluginSDK::PluginMetadata PLUGIN_NAME::GetMetadata() const
 {
-    return {"NeoVSID", PLUGIN_VERSION, "French VACC"};
+    return {"PLUGIN_NAME", PLUGIN_VERSION, "French VACC"};
 }
