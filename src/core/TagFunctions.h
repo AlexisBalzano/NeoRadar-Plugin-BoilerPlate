@@ -54,4 +54,4 @@ void PLUGIN_NAME::TagProcessing(const std::string &callsign, const std::string &
 {
     
 }
-}  // namespace vsid
+}  // namespace PLUGIN_NAMESPACE

@@ -86,15 +86,15 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cmake --build . --config ${{ env.build_type }}
-          set_target_properties(NeoVSD PROPERTIES OUTPUT_NAME "NeoVSID")
+          set_target_properties(PLUGIN_NAME PROPERTIES OUTPUT_NAME "PLUGIN_NAME")
 
       - name: Create release and upload artifacts
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.ref_name }}
-          name: NeoCCAMS ${{ steps.compute_version.outputs.version }}
+          name: PLUGIN_NAME ${{ steps.compute_version.outputs.version }}
           prerelease: false
           draft: true
           files: |
-            lib/NeoCCAMS*
-            bin/${{ env.build_type }}/NeoCCAMS.dll
+            lib/PLUGIN_NAME*
+            bin/${{ env.build_type }}/PLUGIN_NAME.dll

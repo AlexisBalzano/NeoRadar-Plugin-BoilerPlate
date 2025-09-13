@@ -74,7 +74,7 @@ namespace PLUGIN_NAMESPACE {
         PluginSDK::ControllerData::ControllerDataAPI* controllerDataAPI_ = nullptr;
         Tag::TagInterface* tagInterface_ = nullptr;
         std::unique_ptr<DataManager> dataManager_;
-        std::shared_ptr<NeoVSIDCommandProvider> CommandProvider_;
+        std::shared_ptr<PLUGIN_NAMECommandProvider> CommandProvider_;
 
         // Tag Items
         void RegisterTagItems();
