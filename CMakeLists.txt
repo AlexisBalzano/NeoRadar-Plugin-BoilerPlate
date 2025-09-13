@@ -48,7 +48,7 @@ add_subdirectory(External/NeoRadarSDK)
 # To set after starting development
 set(SOURCES
     src/PLUGIN_NAME.cpp
-    src/PLUGIN_NAME.cpp
+    src/main.cpp
 )
 
 # Define the plugin library
