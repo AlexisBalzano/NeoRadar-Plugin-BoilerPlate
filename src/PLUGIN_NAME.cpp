@@ -1,4 +1,4 @@
-#include "NeoVSID.h"
+#include "PLUGIN_NAME.h"
 #include <numeric>
 #include <chrono>
 #include <httplib.h>
@@ -70,7 +70,7 @@ std::pair<bool, std::string> PLUGIN_NAMESPACE::PLUGIN_NAME::newVersionAvailable(
         {
             auto json = nlohmann::json::parse(res->body);
             std::string latestVersion = json["tag_name"];
-            if (latestVersion != NEOVSID_VERSION) {
+            if (latestVersion != PLUGIN_NAME_VERSION) {
                 logger_->warning("A new version of PLUGIN_NAME is available: " + latestVersion + " (current version: " + PLUGIN_NAME_VERSION + ")");
                 return { true, latestVersion };
             }
@@ -107,7 +107,7 @@ void PLUGIN_NAME::Shutdown()
     this->unegisterCommand();
 }
 
-void vsid::PLUGIN_NAME::Reset()
+void PLUGIN_NAMESPACE::PLUGIN_NAME::Reset()
 {
     autoModeState = true;
 	requestingClearance.clear();

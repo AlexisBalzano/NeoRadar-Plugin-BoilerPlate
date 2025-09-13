@@ -130,14 +130,14 @@ bool DataManager::retrieveCorrectConfigJson(const std::string& oaci)
 
 bool DataManager::isCorrectJsonVersion(const std::string& config_version, const std::string& fileName)
 {
-	if (config_version == NEOVSID_VERSION) {
+	if (config_version == PLUGIN_NAME_VERSION) {
 		return true;
 	}
 	else {
 		if (configsError.contains(fileName)) return false; // Avoid spamming messages for the same file
 		configsError.insert(fileName);
-		DisplayMessageFromDataManager("Config version mismatch! Expected: " + std::string(NEOVSID_VERSION) + ", Found: " + config_version + ", please update your config files.", fileName);
-		loggerAPI_->log(Logger::LogLevel::Error, "Config version mismatch! Expected: " + std::string(NEOVSID_VERSION) + ", Found: " + config_version + fileName);
+		DisplayMessageFromDataManager("Config version mismatch! Expected: " + std::string(PLUGIN_NAME_VERSION) + ", Found: " + config_version + ", please update your config files.", fileName);
+		loggerAPI_->log(Logger::LogLevel::Error, "Config version mismatch! Expected: " + std::string(PLUGIN_NAME_VERSION) + ", Found: " + config_version + fileName);
 	}
 	return false;
 }

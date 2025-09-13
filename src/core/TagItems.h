@@ -48,4 +48,4 @@ void PLUGIN_NAME::UpdateTagItems() {
 void PLUGIN_NAME::UpdateTagItems(std::string callsign) {
     updateTagItem();
 }
-}  // namespace vsid
+}  // namespace PLUGIN_NAMESPACE
