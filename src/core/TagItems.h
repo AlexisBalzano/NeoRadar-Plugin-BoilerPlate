@@ -12,7 +12,7 @@
 #define LOG_DEBUG(loglevel, message) void(0)
 #endif
 
-sing namespace PLUGIN_NAMESPACE::tagitems;
+using namespace PLUGIN_NAMESPACE::tagitems;
 
 namespace PLUGIN_NAMESPACE {
 void PLUGIN_NAME::RegisterTagItems()
