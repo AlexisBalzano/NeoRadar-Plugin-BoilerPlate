@@ -32,6 +32,7 @@ void PLUGIN_NAME::Initialize(const PluginMetadata &metadata, CoreAPI *coreAPI, C
     controllerDataAPI_ = &lcoreAPI->controllerData();
     logger_ = &lcoreAPI->logger();
     tagInterface_ = lcoreAPI->tag().getInterface();
+	packageAPI_ = &lcoreAPI->package();
 	dataManager_ = std::make_unique<DataManager>(this);
 
 #ifndef DEV

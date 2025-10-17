@@ -29,6 +29,7 @@ private:
 	Chat::ChatAPI* chatAPI_ = nullptr;
 	PLUGIN_NAMESPACE::PLUGIN_NAME* PLUGIN_NAME_ = nullptr;
 	PluginSDK::Logger::LoggerAPI* loggerAPI_ = nullptr;
+	Package::PackageAPI* packageAPI_ = nullptr;
 
 	std::filesystem::path configPath_;
 	nlohmann::ordered_json configJson_;
