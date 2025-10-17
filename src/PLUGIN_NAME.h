@@ -46,6 +46,7 @@ namespace PLUGIN_NAMESPACE {
         Fsd::FsdAPI* GetFsdAPI() const { return fsdAPI_; }
         PluginSDK::ControllerData::ControllerDataAPI* GetControllerDataAPI() const { return controllerDataAPI_; }
 		Tag::TagInterface* GetTagInterface() const { return tagInterface_; }
+		Package::PackageAPI* GetPackageAPI() const { return packageAPI_; }
         DataManager* GetDataManager() const { return dataManager_.get(); }
 
     private:
@@ -73,6 +74,7 @@ namespace PLUGIN_NAMESPACE {
         PluginSDK::Logger::LoggerAPI* logger_ = nullptr;
         PluginSDK::ControllerData::ControllerDataAPI* controllerDataAPI_ = nullptr;
         Tag::TagInterface* tagInterface_ = nullptr;
+		Package::PackageAPI* packageAPI_ = nullptr;
         std::unique_ptr<DataManager> dataManager_;
         std::shared_ptr<PLUGIN_NAMECommandProvider> CommandProvider_;
 

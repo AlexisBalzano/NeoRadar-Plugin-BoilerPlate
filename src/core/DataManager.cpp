@@ -27,6 +27,7 @@ DataManager::DataManager(PLUGIN_NAMESPACE::PLUGIN_NAME* PLUGIN_NAME)
 	chatAPI_ = PLUGIN_NAME_->GetChatAPI();
 	loggerAPI_ = PLUGIN_NAME_->GetLogger();
 	controllerDataAPI_ = PLUGIN_NAME->GetControllerDataAPI();
+	packageAPI_ = PLUGIN_NAME->GetPackageAPI();
 
 	configPath_ = getDllDirectory();
 }
